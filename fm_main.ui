@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fm_main</class>
+ <widget class="QMainWindow" name="fm_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>764</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>fm_main</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label_footer">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>label_footer</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget_menu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>731</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_nucleo_de_inteligencia">
+     <attribute name="title">
+      <string>NÚCLEO DE INTELIGÊNCIA</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_nuc_operacao">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <strikeout>false</strikeout>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string>Operação</string>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_nuc_alvo">
+      <property name="geometry">
+       <rect>
+        <x>202</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alvo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_nuc_degravacao">
+      <property name="geometry">
+       <rect>
+        <x>402</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Degravação</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_nuc_vitima">
+      <property name="geometry">
+       <rect>
+        <x>302</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Vítima</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_nuc_agente">
+      <property name="geometry">
+       <rect>
+        <x>102</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Agente</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_nuc_inqt_proc">
+      <property name="geometry">
+       <rect>
+        <x>502</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Inqt / Proc</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_departamento_pessoal">
+     <attribute name="title">
+      <string>DEPARTAMENTO PESSOAL</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_controle_de_material">
+     <attribute name="title">
+      <string>CONTROLE DE MATERIAL</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_sistema">
+     <attribute name="title">
+      <string>...</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>3</y>
+        <width>90</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Usuários</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>661</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_usuario_logado">
+       <property name="text">
+        <string>Usuário logado:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_operacao_aberta">
+       <property name="text">
+        <string>Operação aberta:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_meio">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_alvo_selecionado">
+       <property name="text">
+        <string>Alvo selecionado:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Vítima selecionada:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_fim">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>764</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

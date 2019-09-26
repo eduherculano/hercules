@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fm_nuc_alvo</class>
+ <widget class="QDialog" name="fm_nuc_alvo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>765</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_criar_alvo">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Criar Alvo</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pesquisar_alvo">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pesquisar Alvo</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_salvar_alteracoes">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salvar Alterações</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancelar_alteracoes">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar Alterações</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sair">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget_alvo">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>731</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_historico">
+    <attribute name="title">
+     <string>Histórico</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_historico">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_operacoes">
+    <attribute name="title">
+     <string>Operações</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_documentos">
+    <attribute name="title">
+     <string>Documentos</string>
+    </attribute>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>711</width>
+       <height>311</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_documentos">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_documentos">
+        <item>
+         <widget class="QLineEdit" name="lineEdit_documentos"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_documentos_pesquisar">
+          <property name="text">
+           <string>Pesquisar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_documentos_incluir">
+          <property name="text">
+           <string>Incluir</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_documentos_excluir">
+          <property name="text">
+           <string>Excluir</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget_documentos"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_vulgos">
+    <attribute name="title">
+     <string>Vulgos</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_vulgos">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>701</width>
+       <height>281</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>701</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_vulgos">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_vulgos_pesquisar"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_vulgos_pesquisar">
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_vulgos_incluir">
+        <property name="text">
+         <string>Incluir</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_vulgos_excluir">
+        <property name="text">
+         <string>Excluir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Facção e Função</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_telefones">
+    <attribute name="title">
+     <string>Telefones</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_telefones">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>701</width>
+       <height>271</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>10</y>
+       <width>701</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_telefones">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_telefones_pesquisar"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_telefones_pesquisar">
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_telefones_inserir">
+        <property name="text">
+         <string>Inserir</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_telefones_excluir">
+        <property name="text">
+         <string>Excluir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_enderecos_eletronicos">
+    <attribute name="title">
+     <string>Endereços Eletrônicos</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_enderecos_eletronicos">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>711</width>
+       <height>281</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>701</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_ederecos_eletronicos">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_enderecos_eletronicos"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_pesquisar_enderecos_eletronicos">
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_inserir_enderecos_eletronicos">
+        <property name="text">
+         <string>Inserir</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_excluir_enderecos_eletronicos">
+        <property name="text">
+         <string>Excluir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_locais">
+    <attribute name="title">
+     <string>Locais</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_locais">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>701</width>
+       <height>281</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>701</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_locais">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_locais_pesquisar"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_locais_pesquisar">
+        <property name="text">
+         <string>Pesquisar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_locais_incluir">
+        <property name="text">
+         <string>Incluir</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_locais_excluir">
+        <property name="text">
+         <string>Excluir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_dados_estatisticos">
+    <attribute name="title">
+     <string>Dados Estatísticos</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>83</y>
+     <width>170</width>
+     <height>170</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>imagem_capa</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_gerar_relatorio">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gerar Relatório</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>263</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_alvo_form_direito">
+    <item>
+     <widget class="QLabel" name="label_idade_atual">
+      <property name="text">
+       <string>Idade Atual</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_idade_atual"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>531</width>
+     <height>225</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_alvo_form_central">
+    <item>
+     <widget class="QLabel" name="label_nome">
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_nome"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_alvo_data_nascimento">
+        <item>
+         <widget class="QLabel" name="label_data_mascimento">
+          <property name="text">
+           <string>Data de Nascimento</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit_data_nascimento"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>350</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_mae">
+      <property name="text">
+       <string>Mãe</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_mae"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_pai">
+      <property name="text">
+       <string>Pai</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_pai"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_naturalidade">
+      <property name="text">
+       <string>Naturalidade</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_naturalidade"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_abrir_alvo">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>20</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Abrir Alvo</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>pushButton_pesquisar_alvo</tabstop>
+  <tabstop>pushButton_criar_alvo</tabstop>
+  <tabstop>pushButton_salvar_alteracoes</tabstop>
+  <tabstop>pushButton_gerar_relatorio</tabstop>
+  <tabstop>pushButton_cancelar_alteracoes</tabstop>
+  <tabstop>pushButton_sair</tabstop>
+  <tabstop>lineEdit_nome</tabstop>
+  <tabstop>dateEdit_data_nascimento</tabstop>
+  <tabstop>lineEdit_mae</tabstop>
+  <tabstop>lineEdit_pai</tabstop>
+  <tabstop>lineEdit_naturalidade</tabstop>
+  <tabstop>lineEdit_idade_atual</tabstop>
+  <tabstop>tabWidget_alvo</tabstop>
+  <tabstop>tableWidget_historico</tabstop>
+  <tabstop>lineEdit_documentos</tabstop>
+  <tabstop>pushButton_documentos_pesquisar</tabstop>
+  <tabstop>pushButton_documentos_incluir</tabstop>
+  <tabstop>pushButton_documentos_excluir</tabstop>
+  <tabstop>tableWidget_documentos</tabstop>
+  <tabstop>lineEdit_vulgos_pesquisar</tabstop>
+  <tabstop>pushButton_vulgos_pesquisar</tabstop>
+  <tabstop>pushButton_vulgos_incluir</tabstop>
+  <tabstop>pushButton_vulgos_excluir</tabstop>
+  <tabstop>tableWidget_vulgos</tabstop>
+  <tabstop>lineEdit_telefones_pesquisar</tabstop>
+  <tabstop>pushButton_telefones_pesquisar</tabstop>
+  <tabstop>pushButton_telefones_inserir</tabstop>
+  <tabstop>pushButton_telefones_excluir</tabstop>
+  <tabstop>tableWidget_telefones</tabstop>
+  <tabstop>lineEdit_enderecos_eletronicos</tabstop>
+  <tabstop>pushButton_pesquisar_enderecos_eletronicos</tabstop>
+  <tabstop>pushButton_inserir_enderecos_eletronicos</tabstop>
+  <tabstop>pushButton_excluir_enderecos_eletronicos</tabstop>
+  <tabstop>tableWidget_enderecos_eletronicos</tabstop>
+  <tabstop>lineEdit_locais_pesquisar</tabstop>
+  <tabstop>pushButton_locais_pesquisar</tabstop>
+  <tabstop>pushButton_locais_incluir</tabstop>
+  <tabstop>pushButton_locais_excluir</tabstop>
+  <tabstop>tableWidget_locais</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

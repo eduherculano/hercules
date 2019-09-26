@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fm_nuc_operacao</class>
+ <widget class="QDialog" name="fm_nuc_operacao">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>670</width>
+    <height>670</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_criar_operacao">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>20</y>
+     <width>79</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Criar Operação</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget_operacao">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>651</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_historico">
+    <attribute name="title">
+     <string>Registros</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_historico">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>621</width>
+       <height>341</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_dados_estatisticos">
+    <attribute name="title">
+     <string>Dados Estatísticos</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pesquisar_operacao">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>20</y>
+     <width>81</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pesquisar Operação</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_salvar_alteracoes">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>20</y>
+     <width>81</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salvar Alterações</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sair">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>20</y>
+     <width>81</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancelar_alteracoes">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>20</y>
+     <width>81</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar Alterações</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_abrir_operacao">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>20</y>
+     <width>81</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Abrir Operação</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>641</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_nome">
+      <item>
+       <widget class="QLabel" name="label_nome">
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_nome"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_inicio">
+        <item>
+         <widget class="QLabel" name="label_inicio">
+          <property name="text">
+           <string>Início</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_inicio"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>90</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_1">
+        <item>
+         <widget class="QRadioButton" name="radioButton_operacao_ativa">
+          <property name="text">
+           <string>Operação Ativa</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_arquivar_operacao">
+          <property name="text">
+           <string>Arquivar Operação</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_duracao">
+        <item>
+         <widget class="QLabel" name="label_duracao">
+          <property name="text">
+           <string>Duração</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_duracao"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Fim</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_fim"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sair_operacao">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>20</y>
+     <width>81</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sair da Oeração</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>pushButton_pesquisar_operacao</tabstop>
+  <tabstop>pushButton_criar_operacao</tabstop>
+  <tabstop>pushButton_abrir_operacao</tabstop>
+  <tabstop>pushButton_salvar_alteracoes</tabstop>
+  <tabstop>pushButton_cancelar_alteracoes</tabstop>
+  <tabstop>pushButton_sair</tabstop>
+  <tabstop>lineEdit_nome</tabstop>
+  <tabstop>lineEdit_inicio</tabstop>
+  <tabstop>radioButton_operacao_ativa</tabstop>
+  <tabstop>radioButton_arquivar_operacao</tabstop>
+  <tabstop>lineEdit_duracao</tabstop>
+  <tabstop>lineEdit_fim</tabstop>
+  <tabstop>tableWidget_historico</tabstop>
+  <tabstop>tabWidget_operacao</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
